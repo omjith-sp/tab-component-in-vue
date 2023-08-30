@@ -1,0 +1,21 @@
+<div class="tab_container">
+    <div class="theme_header">
+        <h1 class="text">Theme:</h1>
+        <div v-for="(theme, index) in themes"  
+        class="default_theme" 
+        :class="{ 'dark': theme.color === 'dark' }"
+        @click="themehandler(theme.color)"></div>
+    </div>
+    <div class="tab_header">
+        <div v-for="(tab, index) in tabs" 
+        :key="index" class="box" 
+        :class="[{light : tab.active && tab.theme==='light'},{dark:tab.active && tab.theme==='dark'}]"
+        @click="tabClickHandler(tab.index)">
+            <h1 class="text">{{tab.data}}</h1>
+        </div>
+    </div>
+    <div class="tab_view" :class="tabs[selectedTabIndex].theme">
+        <h1 class="text">{{tabs[selectedTabIndex].data}}</h1>
+    </div>
+    
+</div>

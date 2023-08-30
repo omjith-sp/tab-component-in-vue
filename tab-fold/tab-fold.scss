@@ -1,0 +1,65 @@
+.tab_container{
+    height: 80vh;
+    width: 80vw;
+    padding: 10vw;
+    .theme_header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+       .default_theme{
+        width: 50px;
+        height: 30px;
+        margin: 0 3px;
+        border: 5px solid rgba(145, 135, 135, 0.726);
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.251);
+        &.dark{
+            background-color: rgba(65, 59, 59, 0.831);
+        
+        }
+       } 
+    }
+    .tab_header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        .box{
+            width: 200px;
+            height: 180px;
+            margin-right: 20px;
+            border: 5px solid rgba(145, 135, 135, 0.726);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.dark{
+                background-color: rgba(65, 59, 59, 0.831);
+                .text{
+                    color: white;
+                }
+            }
+            &.light{
+                background-color: rgba(143, 108, 76, 0.372);
+            }
+        } 
+    }
+    .tab_view{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid rgba(145, 135, 135, 0.623);
+        &.dark{
+            background-color: rgba(65, 59, 59, 0.831);
+            .text{
+                color: white;
+            }
+        }
+        &.light{
+            background-color: rgba(143, 108, 76, 0.372);
+        }
+    }
+}
